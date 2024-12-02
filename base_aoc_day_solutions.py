@@ -16,11 +16,12 @@ class BaseAoCDaySolutions:
         return -1
     
     def run_solution(self, part_method):
-        start_time = time.time()
+        start_time = time.perf_counter()
         solution = part_method()
-        elapsed_time = (time.time() - start_time) * 1000
+        end_time = time.perf_counter()
+        elapsed_time_ms = (end_time - start_time) * 1000
     
-        return (solution, elapsed_time)
+        return (solution, elapsed_time_ms)
     
     def log_solution_output(self, part_number, solution, elapsed_time):
         log_info(f"-- Day {self.day_number} Pt {part_number}: {solution} ({elapsed_time:.3f}ms)")
