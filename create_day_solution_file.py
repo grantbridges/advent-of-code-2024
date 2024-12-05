@@ -2,7 +2,7 @@
 
 # adjust these as needed
 YEAR = 2024
-DAY = 3
+DAY = 4
 
 with open('day_solutions_stub.py', 'r') as stub_file:
     stub_contents = stub_file.read()
