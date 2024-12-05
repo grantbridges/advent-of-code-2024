@@ -6,7 +6,7 @@ class LogLevel(Enum):
     Warning = 2,
     Error = 3
 
-LOG_LEVEL = LogLevel.Debug
+LOG_LEVEL = LogLevel.Info
 
 def log(msg, level: LogLevel):
     if level.value >= LOG_LEVEL.value:
