@@ -1,8 +1,13 @@
+import sys
+
 # A helper file to create a new day_#_solutions.py file from the stub
 
-# adjust these as needed
 YEAR = 2024
-DAY = 4
+DAY = 1
+
+# receive day # as input arg
+if len(sys.argv) > 1:
+    DAY = int(sys.argv[1])
 
 with open('day_solutions_stub.py', 'r') as stub_file:
     stub_contents = stub_file.read()
